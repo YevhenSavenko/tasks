@@ -1,0 +1,33 @@
+.wrapper{
+    width: 1400px;
+    margin: 100px auto 0;
+    font-family: sans-serif;
+}
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.headding{
+    text-align: center; 
+    text-transform: uppercase; 
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.button{
+    padding: 15px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #009999;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.button:focus{
+    outline: none;
+}

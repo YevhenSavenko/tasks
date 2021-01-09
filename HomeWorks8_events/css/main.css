@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #ccc;
+}
+
+.button_home{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.button_home a{
+    display: inline-block;
+    color: white;
+    background: rgb(43, 78, 194);
+    padding: 15px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.navigate{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block_work{
+    width: 50%;
+    height: 50vh;
+}
+
+.block_work{
+    background: rgb(15, 99, 99);
+    border-bottom: 1px solid #fff;
+    transition: background .5s;
+}
+
+.block_work:nth-child(4n+2), .block_work:nth-child(4n+3){
+	background: rgb(17, 113, 151);
+}
+
+.block_work:nth-child(4n+2):hover, .block_work:nth-child(4n+3):hover{
+	background: rgb(34, 129, 167, 0.85);
+}
+
+.block_work:nth-last-child(-n+2){
+	border-bottom: none;
+}
+
+.block_work:hover{
+    background: rgba(0, 139, 139, 0.85);
+}
+
+.block_work:hover a{
+    color: #b9b9b9;
+    letter-spacing: 2px;
+}
+
+.block_work:nth-child(2n-1){
+    border-right: 1px solid #fff;
+}
+
+.block_work a{
+    transition: .5s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.container{
+    width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background: #f0f0f0;
+}
+
+.headding{
+    text-align: center;
+    padding-top: 45px;
+    color: darkcyan;
+    margin-bottom: 20px;
+}
+
+.headding_home{
+    text-align: center;
+    padding-top: 45px;
+    color: rgb(154, 205, 50);
+    margin-bottom: 20px;
+}
+
+.lowwer_headding{
+    color: teal;
+    margin: 10px;
+    text-align: center;
+}
+
+.lowwer_headding_home{
+    color: rgb(154, 205, 50);
+    margin: 10px;
+    text-align: center;
+}
+
+.tasks{
+    padding: 50px 0;
+}
+
+.random_block{
+    width: 250px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+#random_out{
+    font-weight: 600;
+    font-size: 24px;
+    margin: 10px 0 25px;
+}
+
+#random_button{
+    padding: 10px 20px;
+    border-style: darkcyan;
+    color: darkcyan;
+    font-weight: 600;
+}
+
+/* Task_2 */
+
+#coordinates_read{
+    min-height: 500px;
+    border: 1px solid darkcyan;
+}
+
+#coordinates_out, #how_click{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Task 3 */
+
+#opacity_button{
+    display: block;
+    width: 200px;
+    border: 1px solid darkcyan;
+    color: darkcyan;
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 20px auto;
+}
+
+#opacity_button:focus{
+    outline: none;
+}
+
+#opacity_text{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Task 4 */
+
+.tabs_block{
+    width: 650px;
+    min-height: 250px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.left_part{
+    display: flex;
+    flex-direction: column;
+    background: darkcyan;
+    justify-content: center;
+}
+
+.buttons{
+    min-width: 100px;
+    background: darkcyan;
+}
+
+.left_part button{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.left_part button:focus{
+    outline: none;
+}
+
+.right_part{
+    align-self: center;
+    animation: tabs .8s;
+}
+
+.tabs_content{
+    display: flex;
+    border: 2px solid darkcyan;
+    padding: 20px 10px;
+}
+
+.tabs_active{
+    transition: .3s;
+    background: rgba(0,0,0,.15) !important;
+}
+
+@keyframes tabs{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Task 5 */
+
+.post_up{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.post{
+    margin: 20px 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darkcyan;
+}
+
+.post:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.post_button{
+    padding: 5px 15px;
+    border: 1px solid darkcyan;
+    background: none;
+    color: darkcyan;
+}
+
+/* Task 6 */
+
+.loadding_wrapper{
+    margin: 0 auto;
+    width: 350px;
+    height: 40px;
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+}
+
+.loadding{
+    width: 0%;
+    height: 100%;
+    background: darkcyan;
+}
+
+#add_percent{
+    cursor: pointer;
+    display: block;
+    padding: 8px 0px;
+    width: 350px;
+    margin: 20px auto 0;
+    border: 1px solid darkcyan;
+    color: darkcyan;
+    font-weight: 600;
+}
+
+#add_percent:focus{
+    outline: none;
+}
+
+/* Task 7 */
+
+
+.table table{
+    border: 1px solid darkcyan;
+    border-collapse: collapse;
+    margin: 50px auto 0;
+}
+
+.table table td, .table table th{
+    border: 1px solid darkcyan;
+    padding: 10px 15px;
+}
+
+.table table td{
+    cursor: pointer;
+}
+
+
+/* Task 8 */
+
+.no_copy{
+    width: 800px;
+    margin: 30px auto 0;
+    line-height: 1.5;
+}
+
+/* Task 9 */
+
+.like_wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.like_block{    
+    cursor: pointer;
+    padding: 10px 20px;
+    background: darkcyan;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    border-radius: 10px;
+}
+
+.like_text{
+    margin: 0 15px;
+}
+
+/* Task 10 */
+
+.calculate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculate input{
+    border: 1px solid darkcyan;
+    border-bottom: none;
+    width: 180px;
+    padding: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+.calculate_wrapper table{
+    width: 100%;
+    text-align: center;
+    border: 1px solid darkcyan;
+    border-collapse: collapse;
+    background: #eee;
+}
+
+.calculate_wrapper table td{
+    cursor: pointer;
+    padding: 7px 12px;
+    border: 1px solid darkcyan;
+}

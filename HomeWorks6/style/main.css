@@ -1,0 +1,47 @@
+body{
+    background: #e1e1e1;
+}
+
+.wrapper{
+    width: 1400px;
+    margin: 50px auto 0;
+    font-family: sans-serif;
+}
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.headding{
+    text-align: center; 
+    text-transform: uppercase; 
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.button{
+    padding: 15px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgb(117, 32, 134);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.button:focus{
+    outline: none;
+}
+
+.withdraw{
+    margin-top: 100px;
+    min-height: 200px;
+    max-height: 200px;
+    border: 1px solid rgb(105, 0, 0);
+    overflow-y: scroll;
+    padding: 15px;
+    line-height: 2;
+}

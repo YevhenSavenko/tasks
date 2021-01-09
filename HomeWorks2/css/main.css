@@ -1,0 +1,11 @@
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.headding{
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
