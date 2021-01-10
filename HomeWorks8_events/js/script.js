@@ -264,22 +264,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 result = leftPart * rightPart;
             break;
             case '/':
-                result = leftPart / rightPart;
+                if(rightPart === 0){
+                    result = 0;
+                }else{
+                    result = leftPart / rightPart;
+                }
             break;
         
             default:
             break;
         }
 
-        if(rightPart === 0){
-            out_calc.value = '0';
-        }else{
-            if(parseFloat(result) / parseInt(result) === 0){
-                out_calc.value = parseInt(result);
-            } else {
-                out_calc.value = parseFloat(result);
-            }
+    
+        if(parseFloat(result) / parseInt(result) === 0){
+            out_calc.value = parseInt(result);
+        } else {
+            out_calc.value = parseFloat(result);
         }
+
         rightPart = leftPart = 0;
     });
     
@@ -317,6 +319,30 @@ document.addEventListener("DOMContentLoaded", () => {
     //         }
     //     }
     // });
+
+    const menuCategories = document.querySelectorAll('.menu_categories');
+    const menuItem = document.querySelectorAll('.menu_item');
+    const blockTasks = document.querySelector('.task_11');
+
+    function hideMenuItem(){
+        menuItem.forEach(item => {
+            item.style.maxHeight = '0px';
+        }) 
+    }
+
+    blockTasks.addEventListener('click', _ => {
+        if(_.target.nodeName !== 'LI'){
+            hideMenuItem();
+        } 
+    })
+
+    menuCategories.forEach((item, index) => {
+        item.addEventListener('click', _ => {
+            hideMenuItem();
+            menuItem[index].style.maxHeight = 'none';
+            menuItem[index].style.minWidth = `${menuCategories[index].getBoundingClientRect().width + 40}px`;
+        });
+    });
 
 
 });

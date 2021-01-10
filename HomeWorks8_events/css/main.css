@@ -371,3 +371,63 @@ body{
     padding: 7px 12px;
     border: 1px solid darkcyan;
 }
+
+/* Task 11 */
+
+.task_11{
+    min-height: 300px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu > ul{
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+}
+
+.menu_categories{
+    position: relative;
+    border-right: 1px solid white;
+    padding: 10px 25px;
+}
+
+.menu_categories:last-child{
+    border-right: none;
+}
+
+.menu ul li{
+    background: rgb(0, 139, 139);
+    color: #fff;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li ul li:hover{
+    background: rgba(0, 110, 110);
+}
+
+.menu_item{
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+.other_item{
+    left: -40%;
+    right: 0;
+}
