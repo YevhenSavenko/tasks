@@ -345,4 +345,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    const scroll = document.querySelector('.scroll');
+    const topButton = document.querySelector('.top_button');
+
+    scroll.addEventListener('scroll', e => {
+        if(e.target.scrollTop > 100){
+            topButton.style.display = 'block';
+        } else {
+            topButton.style.display = 'none';
+        }
+    })
+
+
 });
