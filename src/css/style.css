@@ -1,0 +1,53 @@
+@keyframes rain {
+  0% {
+    transform: translateY(50%); }
+  100% {
+    transformY: translateY(150%); } }
+
+@keyframes showNumber {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.rain td {
+  animation: rain 1s infinite linear alternate-reverse;
+  font-size: 20px;
+  color: #4d4d4d;
+  font-weight: 900;
+  padding: 0 10px; }
+  .rain td:nth-child(2n) {
+    animation-delay: 1s; }
+
+.rain__wrapper {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .rain__wrapper img {
+    transform: translateY(10%); }
+
+body {
+  background: #232323; }
+
+.wrapper {
+  width: 400px;
+  perspective: 500px;
+  transform-style: flat;
+  position: relative; }
+
+.wp {
+  width: 100%;
+  height: 150px;
+  transform: rotateX(60deg) translate(-12.5%, -115%); }
+  .wp div {
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 24px;
+    color: #4d4d4d;
+    opacity: 0;
+    transition: 2s linear; }
+
+/*# sourceMappingURL=style.css.map */
