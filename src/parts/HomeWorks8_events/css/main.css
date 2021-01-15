@@ -763,4 +763,67 @@ body{
     cursor: pointer;
 }
 
-/* */
+/* Task 16 */
+
+.links{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.links ul li{
+    margin-bottom: 8px;
+    list-style: none;
+    position: relative;
+}
+
+.links ul li:before{
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 1px solid darkcyan;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 5px;
+}
+
+/* Task 17 */
+
+.inside__folders{
+    margin-left: 30px;
+    display: block;
+}
+
+.folders{
+    display: flex;
+    justify-content: center;
+}
+
+.folders ul{
+    margin-bottom: 10px;
+}
+
+.folders ul:first-child{
+    margin-top: 10px;
+}
+
+/* Task 18 */
+
+.books ul{
+    margin-top: 20px;
+    margin-left: 25px;
+    list-style: decimal;
+}
+
+.books ul li{
+    margin-bottom: 10px;
+}
