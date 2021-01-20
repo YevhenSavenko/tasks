@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+@mixin robotoRegular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+@mixin robotoBold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.search {
+    background: url('../img/cinema.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__films {
+    }
+
+    &__form {
+    }
+
+    &__block {
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__inputs {
+        position: relative;
+        h3{
+            color:rgba(255, 255, 255, .7);
+            text-transform: uppercase;
+            @include robotoBold;
+            text-align: left;
+            margin-bottom: 25px;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        input{
+            width: 300px;
+            background: rgba(177, 176, 176, .15);
+            border: none;
+            border-bottom: 1px solid #b1b0b0;;
+            border-radius: 5px 5px 0 0;
+            padding: 10px 10px;
+            font-size: 19px;
+            color:rgba(255, 255, 255, .5);
+            @include robotoRegular;
+            text-transform: capitalize;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__about-title {
+        margin-bottom: 15px;
+    }
+
+    &__about-type {
+        
+    }
+
+    &__ganre{
+        position: relative;
+        &_input{
+            transition: border-radius .5s;
+            padding-left: 15px !important;
+            cursor: pointer;
+        }
+    }
+
+    &__select{
+        position: absolute;
+        display: block;
+        content: '';
+        background: rgba(177, 176, 176, .15);
+        width: 100%;
+        overflow: hidden;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        transition: all .5s;
+        div{
+            padding: 13px 0px;
+            cursor: pointer;
+            text-transform: capitalize;
+            color:rgba(255, 255, 255, .7);
+            @include robotoBold;
+            border-top: 1px solid rgba(255, 255, 255, .5);
+            letter-spacing: 1px;
+            padding-left: 15px;
+            transition: background 0.2s;
+            &:first-child{
+                border-top: none;
+            }
+            &:hover{
+                background: rgba(255, 255, 255, .15);
+            }
+        }
+    }
+
+    &__about-type, &__about-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        label{
+            margin-right: 25px;
+            font-size: 18px;
+            @include robotoBold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color:rgba(255, 255, 255, .5);
+        }
+    }
+
+    &__button{
+        transition: all .5s ease-out;
+        transition-delay: 0.5s;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__send {
+        cursor: pointer;
+        @include robotoRegular;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background: rgba(177, 176, 176, .15);
+        padding: 8px 0;
+        width: 200px;
+        border-radius: 7px;
+        font-size: 18px;
+        text-transform: uppercase;
+        @include robotoBold();
+        color:rgba(255, 255, 255, .6);
+        letter-spacing: 1px;
+        transition: all .3s;
+        &:hover{
+            letter-spacing: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid transparent;
+            color:rgba(255, 255, 255, .7);
+        }
+    }
+}
+
