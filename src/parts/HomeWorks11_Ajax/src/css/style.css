@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@keyframes modalShow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+body::-webkit-scrollbar {
+  width: 2px;
+  background: black; }
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(207, 207, 207, 0.3); }
+
 * {
   padding: 0;
   margin: 0;
@@ -12,9 +27,18 @@
 .search {
   background: url("../img/cinema.png") no-repeat;
   background-size: cover;
-  height: 100vh; }
+  min-height: 100vh; }
+  .search::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 0; }
   .search__block {
-    padding-top: 150px;
+    padding-top: 250px;
     display: flex;
     justify-content: center; }
   .search__inputs {
@@ -38,18 +62,24 @@
       font-size: 19px;
       color: rgba(255, 255, 255, 0.5);
       font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      text-transform: capitalize; }
+      font-weight: 400; }
       .search__inputs input:focus {
         outline: none; }
   .search__about-title {
     margin-bottom: 15px; }
+  .search__title-input::placeholder {
+    color: rgba(248, 53, 53, 0.705);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px; }
   .search__ganre {
     position: relative; }
     .search__ganre_input {
       transition: border-radius .5s;
       padding-left: 15px !important;
-      cursor: pointer; }
+      cursor: pointer;
+      text-transform: capitalize; }
   .search__select {
     position: absolute;
     display: block;
@@ -116,5 +146,168 @@
       background: rgba(255, 255, 255, 0.3);
       border: 2px solid transparent;
       color: rgba(255, 255, 255, 0.7); }
+  .search__error {
+    display: flex;
+    justify-content: center; }
+  .search__response-error {
+    padding: 20px 100px;
+    border: 1px solid white;
+    text-align: center;
+    margin-top: 200px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 44px; }
+  .search__all-films {
+    background: url("../img/table.jpg");
+    background-repeat: repeat-y;
+    background-size: contain; }
+  .search__show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .search__wrapper-show {
+    display: flex;
+    width: 30%;
+    margin-bottom: 50px; }
+    .search__wrapper-show:nth-child(-n+3) {
+      margin-top: 100px; }
+    .search__wrapper-show:last-child {
+      margin-bottom: 100px; }
+  .search__right-part {
+    margin-left: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; }
+  .search__image {
+    height: 200px;
+    width: 135px;
+    object-fit: cover; }
+  .search__type-films {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-size: 14px; }
+  .search__title-film {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px; }
+  .search__year {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .search__button-details {
+    cursor: pointer;
+    background: none;
+    border: 1px solid #b1b0b0;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background .5s, border-radius .5s; }
+    .search__button-details:hover {
+      background: #b1b0b0;
+      border-radius: 10px;
+      color: rgba(56, 56, 56, 0.801); }
+    .search__button-details:focus {
+      outline: none; }
+    .search__button-details:active {
+      outline: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  .search__paginator {
+    display: flex;
+    justify-content: center; }
+    .search__paginator .all__page {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      align-self: center; }
+    .search__paginator button {
+      margin: 0 25px;
+      cursor: pointer;
+      padding: 5px 10px;
+      background: none;
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      letter-spacing: 4px;
+      font-size: 20px;
+      transition: background 0.3s; }
+      .search__paginator button:focus {
+        outline: none; }
+      .search__paginator button:disabled {
+        cursor: default;
+        border: transparent;
+        color: transparent; }
+        .search__paginator button:disabled:hover {
+          background: none; }
+      .search__paginator button:hover {
+        background: rgba(177, 176, 176, 0.15); }
+
+.modal {
+  color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+  .modal__window {
+    position: relative;
+    max-width: 1000px;
+    background-color: black; }
+  .modal__info-film {
+    padding: 25px; }
+  .modal__cross {
+    cursor: pointer;
+    width: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: rgba(255, 255, 255, 0.5); }
+  .modal__description {
+    display: flex; }
+  .modal__hide {
+    display: none; }
+  .modal__show {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .modal__show .modal__window {
+      animation: modalShow 1.5s; }
+  .modal__center-part {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 25px; }
+  .modal__row {
+    display: flex;
+    justify-content: space-between; }
+    .modal__row div:nth-child(2n-1) {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px; }
+  .modal__answer {
+    width: 300px; }
+  .modal__headding {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px; }
 
 /*# sourceMappingURL=style.css.map */

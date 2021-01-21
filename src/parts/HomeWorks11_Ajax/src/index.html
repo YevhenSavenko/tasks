@@ -18,10 +18,10 @@
                   <h3>search movies: </h3>
                   <div class="search__about-title">
                     <label for="title">by title:</label>
-                    <input type="text" name="title">
+                    <input class="search__title-input"type="text" name="title">
                   </div>
                   <div class="search__about-type">
-                    <label for="type">by genre:</label>
+                    <label for="type">by type:</label>
                     <div class="search__ganre">
                       <input class="search__ganre_input "type="text" name="type" readonly value="movie">
                       <div class="search__select" style="max-height: 0px; border: none;"></div>
@@ -35,6 +35,69 @@
                 </div>
               </div>
             </div>
+            <div class="search__error"></div>
+          </div>
+        </div>
+      </section>
+      <section class="search__all-films">
+        <div class="modal modal__hide">
+          <div class="modal__window">
+            <div class="modal__exit">
+              <svg class="modal__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+              </svg>
+            </div>
+            <div class="modal__info-film">
+              <h4 class="modal__headding">Film info: </h4>
+              <div class="modal__description">
+                <div class="modal__left-part">
+                  <img src="" alt="">
+                </div>
+                <div class="modal__center-part">
+                  <div class="modal__row">
+                    <div class="modal__title">Title:</div>
+                    <div class="modal__title-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__released">Released:</div>
+                    <div class="modal__released-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__genre">Genre:</div>
+                    <div class="modal__genre-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__country">Country:</div>
+                    <div class="modal__country-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__director">Director:</div>
+                    <div class="modal__director-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__writer">Writer:</div>
+                    <div class="modal__writer-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__actors">Actors:</div>
+                    <div class="modal__actors-answer modal__answer"></div>
+                  </div>
+                  <div class="modal__row">
+                    <div class="modal__awards">Awards:</div>
+                    <div class="modal__awards-answer modal__answer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="search__show"></div>
+          <div class="search__paginator">
+            <div class="prev__page"></div>
+            <div class="all__page"></div>
+            <div class="next__page"></div>
           </div>
         </div>
       </section>
