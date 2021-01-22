@@ -1,3 +1,18 @@
+const descript = document.querySelectorAll('.descript');
+const taskText = document.querySelectorAll('.task__text');
+
+descript.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        if(taskText[index].classList.contains('task__text')){
+            taskText[index].classList.remove('task__text');
+            taskText[index].classList.add('task__show');
+        } else {
+            taskText[index].classList.add('task__text');
+            taskText[index].classList.remove('task__show');
+        }
+    })
+});
+
 const headerCount = document.querySelector('.header__count');
 const topArrow = document.querySelector('.top__arrow');
 const bottomArrow = document.querySelector('.bottom__arrow');

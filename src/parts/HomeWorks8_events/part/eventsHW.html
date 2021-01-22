@@ -15,6 +15,13 @@
           <hr />
           <div class="tasks task_16">
             <h2 class="lowwer_headding">Task 1</h2>
+            <button class="descript">Describe tasks</button>
+            <div class="task__text task__content">
+              Создать html-страницу со списком ссылок.
+              Ссылки на внешние источники (которые начинаются с http://)
+              необходимо подчеркнуть пунктиром.
+              Искать такие ссылки в списке и устанавливать им дополнительные стили необходимо с помощью JS.
+            </div>
             <div class="links">
               <ul>
                 <li><a href="#">index.html</a></li>
@@ -29,23 +36,29 @@
           <hr>
           <div class="tasks task_17">
             <h2 class="lowwer_headding">Task 2</h2>
+            <button class="descript">Describe tasks</button>
+            <div class="task__text task__content">
+              Создать html-страницу с деревом вложенных директорий.
+              При клике на элемент списка, он должен сворачиваться или
+              разворачиваться. При наведении на элемент, шрифт должен становится жирным (с помощью CSS). 
+            </div>
             <div class="folders">
               <ul>
-                <li class="folser__open">This PC</li>
+                <li class="folder__open">This PC</li>
                 <ul class="inside__folders">
-                  <li class="folser__open">Local Disk (C:)</li>
+                  <li class="folder__open">Local Disk (C:)</li>
                   <ul class="inside__folders">
                     <li>Program Files</li>
                     <li>Users</li>
                     <li>Windows</li>
                   </ul>
-                  <li class="folser__open">Local Disk (D:)</li>
+                  <li class="folder__open">Local Disk (D:)</li>
                   <ul class="inside__folders">
                     <li>New Folder 1</li>
                     <li>New Folder 2</li>
                     <li>New Folder 3</li>
                   </ul>
-                  <li class="folser__open">Local Disk (E:)
+                  <li class="folder__open">Local Disk (E:)</li>
                   <ul class="inside__folders">
                     <li>New Folder 1</li>
                     <li>New Folder 2</li>
@@ -58,6 +71,16 @@
         <hr>
         <div class="tasks task_18">
           <h2 class="lowwer_headding">Task 3</h2>
+          <button class="descript">Describe tasks</button>
+          <div class="task__text task__content">
+            Создать html-страницу со списком книг.
+            При щелчке на элемент, цвет текста должен меняться на оранжевый. При повторном щелчке на другую книгу, предыдущей
+            необходимо возвращать прежний цвет.
+            Если при клике мышкой была зажата клавиша Ctrl, то элемент
+            добавляется/удаляется из выделенных. Если при клике мышкой
+            была зажата клавиша Shift, то к выделению добавляются все
+            элементы в промежутке от предыдущего кликнутого до текущего
+          </div>
           <div class="books">
             <ul>
               <li>A Smarter Way to Learn JavaScript: The new tech-assisted approach that requires half the effort  by Mark Myers</li>
@@ -73,6 +96,51 @@
             </ul>
           </div>
         </div>
+        <hr>
+        <div class="tasks task_19">
+          <h2 class="lowwer_headding">Task 4</h2>
+          <button class="descript">Describe tasks</button>
+          <div class="task__text task__content">
+            Создать html-страницу для отображения/редактирования текста.
+            При открытии страницы текст отображается с помощью тега
+            div. При нажатии Ctrl+E, вместо div появляется textarea с тем
+            же текстом, который теперь можно редактировать. При нажатии
+            Ctrl+S, вместо textarea появляет div с уже измененным текстом.
+            Не забудьте выключить поведение по умолчанию для этих сочетаний клавиш.
+          </div>
+          <div class="edit-wrapper">
+            <div class="edit content-show">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Ea temporibus accusantium quaerat amet non vel esse repudiandae 
+              adipisci recusandae porro beatae quisquam, voluptatibus officiis 
+              commodi voluptatem, animi, saepe consectetur. Hic, asperiores, blanditiis 
+              fugiat ullam veritatis similique quisquam, in doloremque eligendi architecto laborum. 
+              Voluptatem optio corporis soluta dignissimos quos! Totam atque molestiae pariatur? Explicabo similique possimus 
+              magnam enim voluptates voluptatem, magni obcaecati quod beatae veritatis laudantium nostrum esse repellendus quam.
+            </div>
+            <textarea name="" id="edit-content" class="content-hide"></textarea>
+           </div>
+        </div>
+        <hr>
+        <div class="tasks task_20">
+          <h2 class="lowwer_headding">Task 5</h2>
+          <button class="descript">Describe tasks</button>
+          <div class="task__text task__content">
+            Создать html-страницу с большой таблицей.
+            При клике по заголовку колонки, необходимо отсортировать
+            данные по этой колонке. Например: на скриншоте люди отсортированы по возрасту. Учтите, что числовые значения должны
+            сортироваться как числа, а не как строки.
+          </div>
+          <div class="table-with-sort">
+            <table>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Company</th>
+              </tr>
+            </table>
+          </div>
       </section>
     </main>
     <footer>
