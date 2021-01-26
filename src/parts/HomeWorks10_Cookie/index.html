@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="add__palette">
+        <div class="container">
+            <div class="add__color">
+                <div class="add__color-form">
+                    <h4>Create new color</h4>
+                    <form action="" class="form__submit">
+                        <div class="name__color">
+                            <div class="check__name">
+                                <label>Color: </label>
+                                <input type="name">
+                            </div>
+                            <div class="input__error-name"></div>
+                        </div>
+                        <div class="type__color">
+                            <label>Type:</label>
+                            <select id="select__type">
+                                <option value="rgb">RGB</option>
+                                <option value="hex">HEX</option>
+                                <option value="rgba">RGBA</option>
+                            </select>
+                        </div>
+                        <div class="code__color">
+                            <div class="check__code">
+                                <label>Code: </label>
+                                <input type="name">
+                            </div>
+                            <div class="input__error-code"></div>
+                        </div>
+                        <div class="button__send">
+                            <button type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="palette">
+        <div class="container">
+            <div class="show__colors">
+                <div class="one__color">
+                    <div class="descript">
+                        <div class="title">Yellowgreen</div>
+                        <div class="type">RGB</div>
+                        <div class="code">154,205,50</div>
+                    </div>
+                </div>
+                <div class="one__color">
+                    <div class="descript">
+                        <div class="title">Darkcyan</div>
+                        <div class="type">RGBA</div>
+                        <div class="code">0,139,139,1</div>
+                    </div>
+                </div>  
+                <div class="one__color">
+                    <div class="descript">
+                        <div class="title">Orangered</div>
+                        <div class="type">HEX</div>
+                        <div class="code">#ff4500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
