@@ -1,2 +1,3 @@
 # tasks
-All javascript tasks: src/parts
+Live:
+https://yevhensavenko.github.io/tasks/src/
