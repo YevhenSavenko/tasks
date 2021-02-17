@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       searchPaginator.innerText = '';
 
       let request;
-      let strAPI = 'http://www.omdbapi.com/?apikey=e87d2168';
+      let strAPI = 'https://www.omdbapi.com/?apikey=e87d2168';
 
       if(window.XMLHttpRequest) 
          request = new XMLHttpRequest();
