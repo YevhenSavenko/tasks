@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const buttonDetails = document.querySelectorAll('.search__button-details').forEach(item => {
                item.addEventListener('click', () => {
                   let requestDetails;
-                  let strDetails = `http://www.omdbapi.com/?apikey=e87d2168&i=${item.dataset.id}`;
+                  let strDetails = `https://www.omdbapi.com/?apikey=e87d2168&i=${item.dataset.id}`;
 
                   if(window.XMLHttpRequest) 
                      requestDetails = new XMLHttpRequest();
